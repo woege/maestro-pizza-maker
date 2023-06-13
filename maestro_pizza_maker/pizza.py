@@ -92,7 +92,7 @@ class Pizza:
     def name(self) -> str:
         # TODO: implement name generation, it is purely up to you how you want to do it
         # (you can use random, you can use some kind of algorithm) - just make sure that
-        # the name is unique
+        # the name is unique.
         pass
 
     @property
@@ -102,3 +102,5 @@ class Pizza:
         # So we will use the fat vector to calculate the taste of the pizza with the following formula:
         # taste = 0.05 * fat_dough + 0.2 * fat_sauce + 0.3 * fat_cheese + 0.1 * fat_fruits + 0.3 * fat_meat + 0.05 * fat_vegetables
         pass
+
+
