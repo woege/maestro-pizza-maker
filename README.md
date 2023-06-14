@@ -15,19 +15,21 @@ Some parts of the project are already implemented and some are not. Your task is
 
 There are two main classes in the `maestro_pizza_maker` package: `Pizza` and `PizzaMenu`. the `Pizza` class represents a single pizza and the `PizzaMenu` class represents a menu of pizzas. The `PizzaMenu` class is implemented in the `maestro_pizza_maker/pizza_menu.py` file and the `Pizza` class is implemented in the `maestro_pizza_maker/pizza.py` file. 
 
-`Pizza` consists of predefined ingredients, which are represented by the `PizzaIngredient` class. The `PizzaIngredients` class is implemented in the `maestro_pizza_maker/ingredients.py` file. The `PizzaIngredients` class is already implemented and you do not need to change it.
+`Pizza` consists of predefined ingredients, which are represented by the `PizzaIngredient` class. The `PizzaIngredients` class is implemented in the `maestro_pizza_maker/ingredients.py` file. The `PizzaIngredients` class is already implemented and you do not need to change it. Here just please carefully go through the code and get familiar with it. Special atttention should be paid to the types of `PizzaIngredient` class attributes.
 
-Please go through the code and try to understand, how the code works. If it is not clear to you, please don't worry, the exercise is designed to guide you through the code step by step.
+There is also `sand_box` directory, which contains some code that is not meant to be interactited with. It just provides drawings from Multivariate Normal Distribution used in the `PizzaIngredients` class.
+
+Please go through the code and try to understand, how the code works. If it is not clear to you after first reading, please don't worry, the exercise is designed to guide you through the code step by step.
 
 ### How to proceed with the exercise
 
-1. Clone this repository to your local machine.
-2. Create a new branch with your name and checkout to it.
+1. *Fork* this repository to your own GitHub account.
+2. *Clone* the forked repository to your local machine.
 3. Install the requirements from the `requirements.txt` file via pip or conda or from `pyproject.toml` via poetry.
 4. Follow the instructions here in the `README.md` file and also detailed instructions in each file.
 5. Solving the exercise in the order listed below is recommended.
-6. Commit your changes and push them to the remote repository.
-7. Create a pull request to the master branch.
+6. *Commit* and *push* your changes to your forked repository at least one day before the interview.
+7. *Send* us the link to your forked repository.
 
 ### Exercise
 
@@ -56,7 +58,7 @@ Please go through the code and try to understand, how the code works. If it is n
     8.2. Optional: Consider writing a test for this method.
 9. Implement `__len__` method in the `PizzaMenu` class (file `maestro_pizza_maker/pizza_menu.py` line 63).
     9.1. Optional: Consider writing a unit test for this method using `pytest`.
-10. Implement methods `delta_pizza_menu`, `gamma_pizza_menu`, `vega_pizza_menu` in the file `maestro_pizza_maker/pizza_greeks.py`.
+10. Implement methods `menu_sensitivity_protein`, `menu_sensitivity_carbs`, `menu_sensitivity_fat` in the file `maestro_pizza_maker/pizza_sensitivities.py`.
     10.1. Read TODO properly.
 11. Implement methods `taste_at_risk_pizza`, `taste_at_risk_menu`, `conditonal_taste_at_risk_pizza` and `conditonal_taste_at_risk_menu` in the file `maestro_pizza_maker/taste_at_risk.py`.
     11.1. Read TODO properly.

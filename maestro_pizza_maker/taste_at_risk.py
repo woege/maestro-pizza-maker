@@ -18,6 +18,7 @@ def taste_at_risk_pizza(pizza: Pizza, quantile: float) -> float:
 def taste_at_risk_menu(menu: PizzaMenu, quantile: float) -> float:
     # TODO: implement the taste at risk measure for a menu
     # quantile is the quantile that we want to consider
+    # Hint: the taste of the whole menu is the sum of the taste of all pizzas in the menu, or? ;)
     pass
 
 
@@ -30,4 +31,5 @@ def conditional_taste_at_risk_pizza(pizza: Pizza, quantile: float) -> float:
 
 def conditional_taste_at_risk_menu(menu: PizzaMenu, quantile: float) -> float:
     # TODO: implement the conditional taste at risk measure for a menu
+    # Hint: the taste of the whole menu is the sum of the taste of all pizzas in the menu, or? ;) (same as for the taste at risk)
     pass
