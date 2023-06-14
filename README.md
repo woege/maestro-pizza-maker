@@ -4,16 +4,16 @@
 
 ### Introduction
 
-This exercise is designed to test your ability to write code that is easy to understand, maintain, and test, as well as ability to use the tools/methods that are commonly used in our community. The exercise is designed to be completed in 2-3 hours. If you are not able to complete it in this time, please do not worry. We are more interested in the quality of your code than the speed at which you write it.
+This exercise is designed to test your ability to write code that is easy to understand, maintain, and test, as well as the ability to use the tools/methods that are commonly used in our community. The exercise is designed to be completed in 2-3 hours. If you are not able to complete it in this time, please do not worry. We are more interested in the quality of your code than the speed at which you write it.
 
 You will be asked to follow the instructions in this `README.md` file and also detailed instructions in every file.
 
 ### Quick overview of the project
 
-This project is supposed to help to Maestro Pizza Maker to be more efficient in his work. The project is divided into two parts: `maestro_pizza_maker` package and `notebooks` directory.
-Some parts of the project are already implemented and some are not. Your task is to implement the missing parts. Please read the instructions carefully and everytime you see `TODO` in the code, read the instructions carefully and implement the missing part.
+This project is supposed to help the Maestro Pizza Maker to be more efficient in his work. The project is divided into two parts: the `maestro_pizza_maker` package and the `notebooks` directory.
+Some parts of the project are already implemented and some are not. Your task is to implement the missing parts. Please read the instructions carefully and everytime you see `TODO` in the code, implement the missing part.
 
-There are two main classes in the `maestro_pizza_maker` package: `Pizza` and `PizzaMenu`. `Pizza` class represents a single pizza and `PizzaMenu` class represents a menu of pizzas. The `PizzaMenu` class is implemented in the `maestro_pizza_maker/pizza_menu.py` file and the `Pizza` class is implemented in the `maestro_pizza_maker/pizza.py` file. 
+There are two main classes in the `maestro_pizza_maker` package: `Pizza` and `PizzaMenu`. the `Pizza` class represents a single pizza and the `PizzaMenu` class represents a menu of pizzas. The `PizzaMenu` class is implemented in the `maestro_pizza_maker/pizza_menu.py` file and the `Pizza` class is implemented in the `maestro_pizza_maker/pizza.py` file. 
 
 `Pizza` consists of predefined ingredients, which are represented by the `PizzaIngredient` class. The `PizzaIngredients` class is implemented in the `maestro_pizza_maker/ingredients.py` file. The `PizzaIngredients` class is already implemented and you do not need to change it.
 
@@ -62,7 +62,7 @@ Please go through the code and try to understand, how the code works. If it is n
     11.1. Read TODO properly.
 12. Design and implement optimization model `maximize_taste_penalty_price` in the file `maestro_pizza_maker/pizza_optimizer.py` (line 193).
     12.1. Read TODO properly.
-    12.2 Find inspiration in the `minimaze_price` model (file `maestro_pizza_maker/pizza_optimizer.py`, line 46)
+    12.2 Find inspiration in the `minimize_price` model (file `maestro_pizza_maker/pizza_optimizer.py`, line 46)
 13. Go to the notebook `notebooks/menu_analysis.ipynb` and follow the instructions there.
     13.1. Follow the instructions in the notebook cell by cell.
     13.2 Creativity is welcome.

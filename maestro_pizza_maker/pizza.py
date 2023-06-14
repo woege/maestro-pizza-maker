@@ -98,7 +98,7 @@ class Pizza:
     @property
     def taste(self) -> np.array:
         # TODO: implement taste function
-        # The famous fact that taste is subjective is not true in this case. We belive that fat is the most important factor, since fat carries the most flavor.
+        # The famous fact that taste is subjective is not true in this case. We believe that fat is the most important factor, since fat carries the most flavor.
         # So we will use the fat vector to calculate the taste of the pizza with the following formula:
         # taste = 0.05 * fat_dough + 0.2 * fat_sauce + 0.3 * fat_cheese + 0.1 * fat_fruits + 0.3 * fat_meat + 0.05 * fat_vegetables
         pass

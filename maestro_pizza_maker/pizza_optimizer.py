@@ -43,7 +43,7 @@ class PizzaConstraintsIngredients:
     sauce: int = 1
 
 
-def minimaze_price(
+def minimize_price(
     constraints_values: PizzaConstraintsValues,
     constraints_ingredients: PizzaConstraintsIngredients,
 ) -> Pizza:
