@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from typing import List
 
 import pandas as pd
+import numpy as np
 
 from maestro_pizza_maker.pizza import Pizza
 
@@ -33,33 +34,69 @@ class PizzaMenu:
         # and ingredients contains a list of ingredients that the pizza contains
         #
         # The dataframe should be sorted by the price column in a descendent order
-        pass
+
+        func = {
+            "name": lambda x: x.name,
+            "price": lambda x: x.price,
+            "protein": lambda x: x.protein,
+            "average_fat": lambda x: x.average_fat,
+            "carbohydrates": lambda x: x.carbohydrates,
+            "calories": lambda x: x.calories,
+            "ingredients": lambda x: x.ingredients,
+        } 
+
+        pizza_df = pd.DataFrame(columns=list(func.keys()))
+
+        for k,v in func.items():
+            pizza_df[k] = pd.Series(map(v, self.pizzas))
+
+            if k == "ingredients":
+                for i, pizza in enumerate(self.pizzas):
+                    pizza_df.at[i, "ingredients"] = [ingredient.value.name for ingredient in pizza.ingredients]
+
+        return pizza_df.sort_values(by=sort_by, ascending=not descendent)
+
 
     @property
     def cheapest_pizza(self) -> Pizza:
         # TODO: return the cheapest pizza from the menu
-        pass
+        idx = np.argmin([pizza.price for pizza in self.pizzas])
+        return self.pizzas[idx]
 
     @property
     def most_caloric_pizza(self) -> Pizza:
         # TODO: return the most caloric pizza from the menu
-        pass
+        idx = np.argmax([pizza.calories for pizza in self.pizzas])
+        return self.pizzas[idx]
+
 
     def get_most_fat_pizza(self, quantile: float = 0.5) -> Pizza:
         # TODO: return the most fat pizza from the menu
         # consider the fact that fat is random and it is not always the same, so you should return the pizza that has the most fat in the quantile of cases specified by the quantile parameter
-        pass
+        fat_quantile = list(map(lambda x: np.quantile(x.fat, quantile), self.pizzas))
+        idx = np.argmax(fat_quantile)
+        return self.pizzas[idx]
+
 
     def add_pizza(self, pizza: Pizza) -> None:
         # TODO: code a function that adds a pizza to the menu
-        pass
+        self.pizzas.append(pizza)
 
-    def remove_pizza(self, pizza: Pizza) -> None:
+
+    def remove_pizza(self, pizza_name: int) -> None:
         # TODO: code a function that removes a pizza from the menu
         # do not forget to check if the pizza is actually in the menu
         # if it is not in the menu, raise a ValueError
-        pass
+        pizza_names = [pizza.name for pizza in self.pizzas]
+        
+        if pizza_name in pizza_names:
+            idx = pizza_names.index(pizza_name)
+            del self.pizzas[idx]
+            return self.pizzas
+        else:
+            raise ValueError(f"Pizza {pizza_name} not in menu")
+        
 
     def __len__(self) -> int:
         # TODO: return the number of pizzas in the menu
-        pass
+        return len(self.pizzas)
